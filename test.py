@@ -50,8 +50,8 @@ def generate_lessons(weekdays_A:list,weekdays_B:list=None,subject_name: str = "l
 
 if __name__ == '__main__':
     generate_lessons(weekdays_A=[0, 2, 4], weekdays_B=[0, 1, 2, 4], subject_name="Література")
-    generate_lessons(weekdays_A=[0, 1, 2, 3, 4],  subject_name="Математика")
-    generate_lessons(weekdays_A=[0, 2, 4],  subject_name="Мистецтво")
+    # generate_lessons(weekdays_A=[0, 1, 2, 3, 4],  subject_name="Математика")
+    # generate_lessons(weekdays_A=[0, 2, 4],  subject_name="Мистецтво")
 
 
 
