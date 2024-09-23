@@ -11,7 +11,7 @@ JOIN
 JOIN 
     subjects sub ON g.subject_id = sub.id
 WHERE 
-    sub.subject_name = 'Audiological scientist'
+    sub.subject_name = 'Microbiologist'
 GROUP BY 
     gr.id , gr.group_name 
 ORDER BY 

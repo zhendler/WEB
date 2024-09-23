@@ -40,7 +40,7 @@ if __name__ == '__main__':
     
     CREATE TABLE IF NOT EXISTS Subjects (
     id SERIAL PRIMARY KEY,
-    subject_name VARCHAR(30),
+    subject_name VARCHAR(50),
     teacher_id INT,
     FOREIGN KEY (teacher_id) REFERENCES teachers (id)
     );

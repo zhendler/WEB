@@ -13,9 +13,11 @@ group_names = ['Alpha', 'Betta', 'Gamma', 'Delta', 'Epsilon']
 try:
     with create_connection() as conn:
         with conn.cursor() as cur:
+            groups = []
             for name in group_names:
                 cur.execute("INSERT INTO groups (group_name) VALUES (%s) RETURNING id;", (name,))
-            groups = cur.fetchall()
+                groups_id = cur.fetchall()
+                groups.append(groups_id)
 
             teachers = []
             for _ in range(5):
@@ -36,7 +38,7 @@ try:
 
             students = []
             for _ in range(NUM_STUDENTS):
-                group_id = random.choice(groups)[0]
+                group_id = (random.choice(groups))[0]
                 name=fake.name()
                 cur.execute('INSERT INTO students (name, group_id) VALUES (%s, %s) RETURNING id', (name, group_id))
                 student_id = cur.fetchone()[0]

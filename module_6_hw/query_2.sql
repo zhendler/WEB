@@ -9,7 +9,7 @@ JOIN
 JOIN 
     subjects sub ON g.subject_id = sub.id
 WHERE 
-    sub.subject_name = 'Surveyor, building control'
+    sub.subject_name = 'Microbiologist'
 GROUP BY 
     s.id, s.name
 ORDER BY 
