@@ -2,9 +2,9 @@ from sqlalchemy import create_engine, func, desc, cast, Numeric
 from sqlalchemy import create_engine, func, desc
 from sqlalchemy.orm import sessionmaker
 from models import Base, Group, Student, Teacher, Subject, Grade
-
+from db_log_in import USER_NAME, USER_PASSWORD, LOCAL_HOST, PORT, DB_NAME
 # Налаштування підключення до бази даних
-DATABASE_URL = 'postgresql+psycopg2://example:example@localhost:5432/mydatabase'
+DATABASE_URL = f'postgresql+psycopg2://{USER_NAME}:{USER_PASSWORD}@{LOCAL_HOST}:{PORT}/{DB_NAME}'
 
 engine = create_engine(DATABASE_URL)
 Session = sessionmaker(bind=engine)
