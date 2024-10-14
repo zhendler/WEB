@@ -5,7 +5,7 @@ from models import Author, Quote
 from dotenv import load_dotenv
 import os
 
-# Завантаження змінних середовища з .env
+
 load_dotenv()
 
 # Отримання URI підключення до MongoDB з файлу .env
