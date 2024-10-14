@@ -8,7 +8,7 @@ import os
 
 load_dotenv()
 
-# Отримання URI підключення до MongoDB з файлу .env
+# Отримання URI підключення1 до MongoDB з файлу .env
 MONGODB_URI = os.getenv('MONGODB_URI')
 
 if not MONGODB_URI:

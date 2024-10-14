@@ -21,7 +21,7 @@ except Exception as e:
     print(f"Помилка підключення: {e}")
     exit(1)
 
-# Налаштування RabbitMQ
+# Налаштув1ання RabbitMQ
 connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
 channel = connection.channel()
 
